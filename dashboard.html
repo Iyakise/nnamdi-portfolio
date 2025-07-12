@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Portfolio Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="dashboard.js"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Crypto Portfolio</h1>
+      <div class="toggle-container">
+        <span>🌞</span>
+        <label class="switch">
+          <input type="checkbox" id="darkModeToggle" />
+          <span class="slider round"></span>
+        </label>
+        <span>🌙</span>
+      </div>
+      <a href="login.html" class="logout-link" onclick="logout()">Logout</a>
+    </header>
+    <canvas id="bgCanvas"></canvas>
+    <main>
+      <div id="portfolio" class="portfolio-grid"></div>
+      <canvas id="chart" style="max-width: 600px; margin-top: 40px;"></canvas>
+      <button onclick="exportToPDF()" class="export-btn">Export to PDF</button>
+    </main>
+    <footer>
+      <p id="totalValue">Total Portfolio Value: $0.00</p>
+    </footer>
+  </div>
+</body>
+</html>
